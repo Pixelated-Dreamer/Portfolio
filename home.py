@@ -173,13 +173,13 @@ st.markdown("""
         WintrCat
     </div>
     <div class="nav-links">
-        <a href="https://www.roblox.com/users/your-profile" class="nav-link" target="_blank">
+        <a href="https://www.roblox.com/users/pixelcatt" class="nav-link" target="_blank">
             <i class="fas fa-gamepad"></i>
         </a>
-        <a href="https://github.com/your-username" class="nav-link" target="_blank">
+        <a href="https://github.com/Pixelated-Dreamer" class="nav-link" target="_blank">
             <i class="fab fa-github"></i>
         </a>
-        <a href="https://chess.com/member/your-profile" class="nav-link" target="_blank">
+        <a href="https://chess.com/member/Pixelcatt391" class="nav-link" target="_blank">
             <i class="fas fa-chess"></i>
         </a>
     </div>
