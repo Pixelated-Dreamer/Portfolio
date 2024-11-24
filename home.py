@@ -1,12 +1,11 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title = "pixelcatt",
+    page_title = "WintrCat",
     page_icon = "🐱",
     layout = "centered"
 )
 
-# Custom CSS for dark theme, grid, and topbar
 st.markdown("""
 <style>
     /* Dark theme and grid background */
@@ -34,6 +33,7 @@ st.markdown("""
         justify-content: space-between;
         padding: 0 2rem;
         z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .logo {
@@ -52,125 +52,114 @@ st.markdown("""
     
     .nav-link {
         color: #8F9094 !important;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        transition: color 0.2s ease;
+        font-size: 1.5rem;
+        transition: all 0.2s ease;
+        opacity: 0.7;
     }
     
     .nav-link:hover {
         color: white !important;
-        border-bottom: none !important;
+        opacity: 1;
+        transform: translateY(-2px);
     }
     
-    /* Content padding to account for fixed topbar */
-    .main-content {
-        margin-top: 80px;
-        padding: 0 2rem;
+    /* Hero section */
+    .hero {
+        text-align: center;
+        padding: 4rem 0;
+        max-width: 800px;
+        margin: 0 auto;
     }
     
-    /* Typography in dark theme */
-    h1, h2, h3, p {
-        color: white !important;
+    .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #FF69B4, #9F7AEA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     
-    /* Links */
-    a {
-        color: #FF69B4 !important;
-        text-decoration: none !important;
-        transition: color 0.2s ease;
+    .hero p {
+        font-size: 1.2rem;
+        color: #8F9094 !important;
+        line-height: 1.6;
     }
     
-    a:hover {
-        color: #ff8cc6 !important;
+    /* Content sections */
+    .section {
+        margin: 4rem 0;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     /* Hide Streamlit elements */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
+    
+    /* Main content padding */
+    .main-content {
+        margin-top: 80px;
+        padding: 0 2rem;
+    }
 </style>
 
 <div class="topbar">
     <div class="logo">
-        <img src="https://raw.githubusercontent.com/Pixelated-Dreamer/portfolio/main/assets/logo.png" height="30px">
-        pixelcatt
+        <img src="your-logo-path.png" height="30px">
+        WintrCat
     </div>
     <div class="nav-links">
-        <a href="https://www.youtube.com/@pixelcatt" class="nav-link" target="_blank">
-            <i class="fab fa-youtube"></i> YouTube
+        <a href="https://www.roblox.com/users/your-profile" class="nav-link" target="_blank">
+            <i class="fas fa-gamepad"></i>
         </a>
-        <a href="https://www.twitch.tv/pixelcatt" class="nav-link" target="_blank">
-            <i class="fab fa-twitch"></i> Twitch
+        <a href="https://github.com/your-username" class="nav-link" target="_blank">
+            <i class="fab fa-github"></i>
         </a>
-        <a href="https://github.com/Pixelated-Dreamer" class="nav-link" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="#about" class="nav-link">
-            <i class="fas fa-user"></i> About
-        </a>
-        <a href="#projects" class="nav-link">
-            <i class="fas fa-code"></i> Projects
-        </a>
-        <a href="#contact" class="nav-link">
-            <i class="fas fa-envelope"></i> Contact
+        <a href="https://chess.com/member/your-profile" class="nav-link" target="_blank">
+            <i class="fas fa-chess"></i>
         </a>
     </div>
 </div>
 
-<!-- Font Awesome for icons -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <div class="main-content">
-""", unsafe_allow_html = True)
+    <div class="hero">
+        <h1>hi, i'm Wilson</h1>
+        <p>Developer, Video Editor, Chess Player.</p>
+    </div>
 
-# Rest of your content
-st.title("pixelcatt")
+    <div class="section">
+        <h2>About Me</h2>
+        <p>I create interactive web applications and enjoy playing chess and Roblox.</p>
+    </div>
 
-# About
-st.markdown("""
-Hi! I'm a 12-year-old software developer from the US.
+    <div class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>story generator</h3>
+            <p>An AI-powered story generator that creates unique tales based on user input.</p>
+            <a href="https://story-generator-pixelatedreamer.streamlit.app/" target="_blank">view project →</a>
+        </div>
+        
+        <div class="project" style="margin-top: 2rem;">
+            <h3>moving average calculator</h3>
+            <p>A financial tool for calculating and visualizing moving averages.</p>
+            <a href="https://ma-pixelcatt.streamlit.app/" target="_blank">view project →</a>
+        </div>
+    </div>
 
-I create interactive web applications and enjoy playing chess and Roblox.
-""")
-
-# Projects
-st.header("projects")
-
-st.markdown("""
-<div class="project">
-    <h3>story generator</h3>
-    <p>An AI-powered story generator that creates unique tales based on user input.</p>
-    <a href="https://story-generator-pixelatedreamer.streamlit.app/" target="_blank">view project →</a>
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Feel free to reach out if you'd like to collaborate or just chat!</p>
+        <a href="mailto:your-email@example.com">your-email@example.com</a>
+    </div>
 </div>
 """, unsafe_allow_html = True)
-
-st.markdown("""
-<div class="project">
-    <h3>moving average calculator</h3>
-    <p>A financial tool for calculating and visualizing moving averages.</p>
-    <a href="https://ma-pixelcatt.streamlit.app/" target="_blank">view project →</a>
-</div>
-""", unsafe_allow_html = True)
-
-# Links
-st.header("links")
-
-st.markdown("""
-- [github](https://github.com/Pixelated-Dreamer)
-- [chess.com](https://www.chess.com/member/pixelcatt391)
-- [roblox](https://www.roblox.com/search/users?keyword=checkmate39)
-- [email](mailto:nevaankantai@gmail.com)
-""")
-
-# Contact
-st.header("contact")
-
-st.markdown("""
-Feel free to reach out if you'd like to collaborate or just chat!
-
-You can email me at [nevaankantai@gmail.com](mailto:nevaankantai@gmail.com)
-""")
 
 # Close the main-content div
 st.markdown("</div>", unsafe_allow_html=True) 
