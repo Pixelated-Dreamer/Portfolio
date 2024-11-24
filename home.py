@@ -189,55 +189,41 @@ st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <div class="main-content">
-    <div class="hero">
+    <div class="hero-center">
+        <img src="coffee-cup.png" alt="Coffee Cup" class="coffee-icon">
         <h1>hi, i'm Nevaan</h1>
-        <p>Developer, Gamer, Chess Player.</p>
-    </div>
-
-    <div class="section">
-        <h2>About Me</h2>
-        <p>I'm passionate about creating software, playing games, and strategic thinking through chess. 
-           When I'm not coding, you can find me exploring new games or planning my next move on the chess board.</p>
-    </div>
-
-    <div class="section">
-        <h2>What I Do</h2>
-        <div class="cards-container">
-            <div class="card">
-                <i class="fas fa-code"></i>
-                <h3>Development</h3>
-                <p>Building creative solutions through code</p>
-            </div>
-            
-            <div class="card">
-                <i class="fas fa-gamepad"></i>
-                <h3>Gaming</h3>
-                <p>Exploring virtual worlds and creating experiences</p>
-            </div>
-            
-            <div class="card">
-                <i class="fas fa-chess"></i>
-                <h3>Chess</h3>
-                <p>Strategic thinking and competitive play</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Project Name</h3>
-                <p>Description of your awesome project goes here</p>
-                <a href="#" class="project-link">Learn More →</a>
-            </div>
-            
-            <div class="project-card">
-                <h3>Project Name</h3>
-                <p>Description of your awesome project goes here</p>
-                <a href="#" class="project-link">Learn More →</a>
-            </div>
-        </div>
+        <p class="subtitle">Developer, Video Editor, Chess Player.</p>
     </div>
 </div>
+
+<style>
+    .hero-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .coffee-icon {
+        width: 120px;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-center h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        margin: 1rem 0;
+        color: white;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-style: italic;
+    }
+</style>
 """, unsafe_allow_html = True) 
