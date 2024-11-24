@@ -104,6 +104,67 @@ st.markdown("""
         margin-top: 80px;
         padding: 0 2rem;
     }
+    
+    /* Card Styles */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        transition: transform 0.2s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .card i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #FF69B4, #9F7AEA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    /* Projects Grid */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .project-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.2s ease;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .project-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #FF69B4;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    
+    .project-link:hover {
+        color: #9F7AEA;
+    }
 </style>
 
 <div class="topbar">
@@ -129,37 +190,54 @@ st.markdown("""
 
 <div class="main-content">
     <div class="hero">
-        <h1>hi, i'm Wilson</h1>
-        <p>Developer, Video Editor, Chess Player.</p>
+        <h1>hi, i'm Nevaan</h1>
+        <p>Developer, Gamer, Chess Player.</p>
     </div>
 
     <div class="section">
         <h2>About Me</h2>
-        <p>I create interactive web applications and enjoy playing chess and Roblox.</p>
+        <p>I'm passionate about creating software, playing games, and strategic thinking through chess. 
+           When I'm not coding, you can find me exploring new games or planning my next move on the chess board.</p>
     </div>
 
     <div class="section">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>story generator</h3>
-            <p>An AI-powered story generator that creates unique tales based on user input.</p>
-            <a href="https://story-generator-pixelatedreamer.streamlit.app/" target="_blank">view project →</a>
-        </div>
-        
-        <div class="project" style="margin-top: 2rem;">
-            <h3>moving average calculator</h3>
-            <p>A financial tool for calculating and visualizing moving averages.</p>
-            <a href="https://ma-pixelcatt.streamlit.app/" target="_blank">view project →</a>
+        <h2>What I Do</h2>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Development</h3>
+                <p>Building creative solutions through code</p>
+            </div>
+            
+            <div class="card">
+                <i class="fas fa-gamepad"></i>
+                <h3>Gaming</h3>
+                <p>Exploring virtual worlds and creating experiences</p>
+            </div>
+            
+            <div class="card">
+                <i class="fas fa-chess"></i>
+                <h3>Chess</h3>
+                <p>Strategic thinking and competitive play</p>
+            </div>
         </div>
     </div>
 
     <div class="section">
-        <h2>Contact</h2>
-        <p>Feel free to reach out if you'd like to collaborate or just chat!</p>
-        <a href="mailto:your-email@example.com">your-email@example.com</a>
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project Name</h3>
+                <p>Description of your awesome project goes here</p>
+                <a href="#" class="project-link">Learn More →</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Project Name</h3>
+                <p>Description of your awesome project goes here</p>
+                <a href="#" class="project-link">Learn More →</a>
+            </div>
+        </div>
     </div>
 </div>
-""", unsafe_allow_html = True)
-
-# Close the main-content div
-st.markdown("</div>", unsafe_allow_html=True) 
+""", unsafe_allow_html = True) 
